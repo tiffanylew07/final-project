@@ -1,0 +1,113 @@
+body {
+  font-family: "Lilita One", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff0f5;
+  text-align: center;
+}
+
+header {
+  background-color: #ffe6ee;
+  padding: 30px;
+  border-bottom: 3px solid black;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+nav {
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+}
+
+nav a {
+  color: #FFB6C1;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+img {
+  width: 100%;
+  max-width: 80%;
+  max-height: 300px;
+  border-radius: 40px;
+  height: auto;
+  margin: 20px auto 0;
+  display: block;
+  object-fit: cover;
+}
+
+section {
+  padding: 40px 20px;
+  background-color: #fff;
+  margin: 20px auto;
+  width: 85%;
+  border: 3px solid black;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 0 auto 20px;
+  max-width: 800px;
+}
+
+#projects .project {
+  margin: 20px 0;
+  padding: 20px;
+  background: #ffe6ee;
+  border: 2px solid black;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+#projects .project:hover {
+  transform: scale(1.02);
+}
+
+#projects a {
+  color: #FF69B4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#projects a:hover {
+  text-decoration: underline;
+}
+
+#contact a {
+  color: #FF69B4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  background-color: transparent;
+}
