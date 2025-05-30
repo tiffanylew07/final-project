@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Guess the Number</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Guess The Number</h1>
+    <p>We have selected a random number. Try to guess it!</p>
+
+    <label for="modeSelect">Pick a mode:</label> 
+    <select id="modeSelect"> 
+      <option value="easy">Easy (Unlimited Attempts, 0-10)</option> 
+      <option value="medium">Medium (10 Attempts, 0-50)</option> 
+      <option value="hard">Hard (5 Attempts, 0-100)</option> 
+    </select>
+
+    <br><br>
+
+    <label for="guessField">Enter a guess:</label>
+    <input type="number" id="guessField" class="guessField" min="0"> 
+
+    <input type="submit" value="Submit Guess" class="guessSubmit" id="submitguess"> 
+
+    <p id="attempts">Attempts Left: ∞</p> 
+  </div>
+
+  <script>
+    let y; 
+    let guess = 0; 
+    let maxNumber = 10; 
+    let maxAttempts = Infinity; 
+    function startNewGame() {
+      const mode = document.getElementById("modeSelect").value; 
+      switch (mode) {
+        case "easy": 
+          maxNumber = 10; 
+          maxAttempts = Infinity; 
+          break;
+        case "medium": 
+          maxNumber = 50; 
+          maxAttempts = 10; 
+          break;
+        case "hard": 
+          maxNumber = 100; 
+          maxAttempts = 5; 
+          break;
+      }
+      y = Math.floor(Math.random() * (maxNumber + 1));
+      guess = 0; 
+      document.getElementById("guessField").value = "";
+      document.getElementById("attempts").textContent = "Attempts Left: " + (maxAttempts === Infinity ? "∞" : maxAttempts); 
+      alert("Game Started! Guess a number between 0 and " + maxNumber); 
+    }
+    window.onload = function() {
+      startNewGame();
+      document.getElementById("modeSelect").onchange = startNewGame;  
+      document.getElementById("submitguess").onclick = function() {
+        let x = Number(document.getElementById("guessField").value);
+        if (isNaN(x) || x < 0 || x > maxNumber) { 
+          alert("Please enter a valid number between 0 and " + maxNumber); 
+          return;
+        }
+        guess++;
+        if (x === y) { 
+          alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN " + guess + " GUESS(ES)!");
+          startNewGame(); 
+          return;
+        }
+        if (guess >= maxAttempts) { 
+          alert("Game Over! You've used all your attempts. The correct number was " + y + ".");
+          startNewGame(); 
+          return;
+        }
+        if (x > y) { 
+          alert("OOPS SORRY!! TRY A SMALLER NUMBER.");
+        } else {
+          alert("OOPS SORRY!! TRY A GREATER NUMBER.");
+        }
+       
+        document.getElementById("attempts").textContent = "Attempts Left: " + (maxAttempts === Infinity ? "∞" : (maxAttempts - guess));
+        document.getElementById("guessField").value = "";
+      };
+      document.getElementById("guessField").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+          event.preventDefault(); 
+          document.getElementById("submitguess").click(); 
+        }
+      });
+    };
+  </script>
+</body>
+</html>
