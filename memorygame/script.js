@@ -20,7 +20,6 @@ const mediumBtn = document.getElementById("mediumBtn");
 const hardBtn = document.getElementById("hardBtn");
 const restartBtn = document.getElementById("restartBtn");
 
-// Config object for mode management
 const modes = {
   easy: { symbols: symbolsEasy, columns: 4 },
   medium: { symbols: symbolsMedium, columns: 6 },
