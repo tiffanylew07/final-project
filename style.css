@@ -1,115 +1,77 @@
 body {
+  font-family: 'Lilita One', sans-serif;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to bottom, #ffe4e1, #ffffff);
+  padding: 0;
+  background: #fff;
   color: #333;
 }
 
 header {
+  background: #ffe6f0;
+  padding: 20px;
   text-align: center;
-  padding: 50px 20px 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-header h1 {
-  font-family: 'Lilita One', cursive;
-  font-size: 3rem;
-  color: #ff69b4;
+h1 {
   margin: 0;
+  color: #ff69b4;
+  font-size: 3em;
 }
 
 nav {
-  background: #fff;
-  padding: 10px 20px;
-  border-radius: 20px;
-  margin: 20px auto;
-  width: fit-content;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  position: sticky;
-  top: 10px;
-  z-index: 1000;
+  background: #ffb6c1;
+  padding: 10px;
+  text-align: center;
 }
 
 nav a {
-  margin: 0 15px;
-  color: #ff69b4;
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
+  margin: 0 15px;
+  font-size: 1.2em;
 }
 
 nav a:hover {
-  color: #d63384;
+  text-decoration: underline;
 }
 
 .hero-img {
-  display: block;
   width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  border-radius: 20px;
-  margin: 20px 0;
+  height: auto;
+  display: block;
 }
 
 section {
-  padding: 60px 20px;
-  max-width: 1100px;
+  padding: 20px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 h2 {
-  font-family: 'Lilita One', cursive;
   color: #ff69b4;
-  font-size: 2.2rem;
-  margin-bottom: 20px;
+  border-bottom: 2px solid #ffb6c1;
+  padding-bottom: 5px;
+}
+
+h3 {
+  color: #ff69b4;
+  margin-top: 30px;
 }
 
 .project {
-  background: #fff;
-  border-radius: 20px;
-  padding: 25px;
-  margin: 30px 0;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project:hover {
-  transform: scale(1.015);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.project h3 {
-  font-family: 'Lilita One', cursive;
-  color: #ff69b4;
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-}
-
-.project p {
-  line-height: 1.6;
-}
-
-#contact a {
-  color: #ff69b4;
-  text-decoration: underline;
-}
-
-#contact a:hover {
-  color: #d63384;
+  margin-bottom: 40px;
 }
 
 footer {
+  background: #ffe6f0;
+  padding: 10px;
   text-align: center;
-  padding: 20px;
-  background: #fff;
-  color: #999;
-  font-size: 0.9rem;
-  margin-top: 50px;
-  border-top: 1px solid #eee;
+  margin-top: 20px;
 }
 
-.project, nav a, .hero-img {
-  transition: all 0.3s ease;
+iframe {
+  width: 100%;
+  height: 400px;
+  border: 2px solid #000;
+  border-radius: 15px;
 }
