@@ -159,6 +159,3 @@ function checkMatch() {
 }
 
 setupGame();
-  <script src="script.js"></script>
-</body>
-</html>
