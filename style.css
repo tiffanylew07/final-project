@@ -39,7 +39,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-.hero-img {
+img {
   width: 100%;
   max-width: 80%;
   max-height: 300px;
@@ -93,15 +93,6 @@ p {
 
 #projects a:hover {
   text-decoration: underline;
-}
-
-#projects .project img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  border-radius: 15px;
-  margin-bottom: 15px;
-  border: 2px solid black;
 }
 
 #contact a {
