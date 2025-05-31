@@ -2,7 +2,7 @@ body {
   font-family: "Lilita One", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fff0f5;
+  background: linear-gradient(to bottom, #ffe4e1, #fff);
   text-align: center;
 }
 
@@ -20,19 +20,19 @@ header h1 {
 }
 
 nav {
-  background-color: #222;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 15px;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
-
 nav a {
-  color: #FFB6C1;
-  text-decoration: none;
-  font-size: 18px;
+  margin: 0 15px;
+  color: #ff69b4;
   font-weight: bold;
-  transition: 0.3s;
+  text-decoration: none;
 }
 
 nav a:hover {
@@ -51,9 +51,9 @@ img {
 }
 
 section {
-  padding: 40px 20px;
+  padding: 60px 20px;
+  margin: 20px 0;
   background-color: #fff;
-  margin: 20px auto;
   width: 85%;
   border: 3px solid black;
   border-radius: 15px;
@@ -91,8 +91,9 @@ p {
   font-weight: bold;
 }
 
-#projects a:hover {
-  text-decoration: underline;
+.project:hover {
+  transform: scale(1.02);
+  transition: 0.3s ease;
 }
 
 #contact a {
