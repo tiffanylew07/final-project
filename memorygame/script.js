@@ -49,7 +49,6 @@ function startTimer() {
     timeElapsed++;
     timerEl.textContent = `Time: ${timeElapsed}s`;
 
-    // Hard mode time limit (example: 60s)
     if (mode === 'hard' && timeElapsed >= 60) {
       messageEl.textContent = "Time's up! Try again.";
       stopTimer();
