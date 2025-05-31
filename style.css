@@ -1,114 +1,115 @@
 body {
-  font-family: "Lilita One", sans-serif;
   margin: 0;
-  padding: 0;
-  background: linear-gradient(to bottom, #ffe4e1, #fff);
-  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #ffe4e1, #ffffff);
+  color: #333;
 }
 
 header {
-  background-color: #ffe6ee;
-  padding: 30px;
-  border-bottom: 3px solid black;
-  width: 100%;
-  box-sizing: border-box;
+  text-align: center;
+  padding: 50px 20px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 header h1 {
-  margin: 0;
+  font-family: 'Lilita One', cursive;
   font-size: 3rem;
+  color: #ff69b4;
+  margin: 0;
 }
 
 nav {
   background: #fff;
-  padding: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  border-radius: 15px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin: 20px auto;
+  width: fit-content;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
   position: sticky;
-  top: 0;
-  z-index: 999;
+  top: 10px;
+  z-index: 1000;
 }
+
 nav a {
   margin: 0 15px;
   color: #ff69b4;
-  font-weight: bold;
   text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #d63384;
 }
 
-img {
-  width: 100%;
-  max-width: 80%;
-  max-height: 300px;
-  border-radius: 40px;
-  height: auto;
-  margin: 20px auto 0;
+.hero-img {
   display: block;
+  width: 100%;
+  max-height: 400px;
   object-fit: cover;
+  border-radius: 20px;
+  margin: 20px 0;
 }
 
 section {
   padding: 60px 20px;
-  margin: 20px 0;
-  background-color: #fff;
-  width: 85%;
-  border: 3px solid black;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
+  font-family: 'Lilita One', cursive;
+  color: #ff69b4;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
 }
 
-p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin: 0 auto 20px;
-  max-width: 800px;
-}
-
-#projects .project {
-  margin: 20px 0;
-  padding: 20px;
-  background: #ffe6ee;
-  border: 2px solid black;
-  border-radius: 15px;
-  transition: 0.3s;
-}
-
-#projects .project:hover {
-  transform: scale(1.02);
-}
-
-#projects a {
-  color: #FF69B4;
-  text-decoration: none;
-  font-weight: bold;
+.project {
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px;
+  margin: 30px 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project:hover {
-  transform: scale(1.02);
-  transition: 0.3s ease;
+  transform: scale(1.015);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.project h3 {
+  font-family: 'Lilita One', cursive;
+  color: #ff69b4;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.project p {
+  line-height: 1.6;
 }
 
 #contact a {
-  color: #FF69B4;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-#contact a:hover {
+  color: #ff69b4;
   text-decoration: underline;
 }
 
+#contact a:hover {
+  color: #d63384;
+}
+
 footer {
+  text-align: center;
   padding: 20px;
-  margin-top: 40px;
+  background: #fff;
+  color: #999;
   font-size: 0.9rem;
-  background-color: transparent;
+  margin-top: 50px;
+  border-top: 1px solid #eee;
+}
+
+.project, nav a, .hero-img {
+  transition: all 0.3s ease;
 }
